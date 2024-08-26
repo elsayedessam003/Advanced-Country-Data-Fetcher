@@ -1,9 +1,8 @@
 export function displayCountries(countries) {
     const container = document.getElementById('countries-container');
-    container.innerHTML = ''; // Clear previous content
+    container.innerHTML = '';
 
     countries.forEach(country => {
-        // Skip creating the card if the country is France
         if (country.name.common !== "Israel") {
             const card = createCountryCard(country);
             container.appendChild(card);
