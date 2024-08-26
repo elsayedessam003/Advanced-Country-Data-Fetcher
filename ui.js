@@ -3,8 +3,11 @@ export function displayCountries(countries) {
     container.innerHTML = ''; // Clear previous content
 
     countries.forEach(country => {
-        const card = createCountryCard(country);
-        container.appendChild(card);
+        // Skip creating the card if the country is France
+        if (country.name.common !== "Israel") {
+            const card = createCountryCard(country);
+            container.appendChild(card);
+        }
     });
 }
 
